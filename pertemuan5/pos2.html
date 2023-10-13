@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>position</title>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Croissant+One&family=Dancing+Script&display=swap" rel="stylesheet">
+
+	<style type="text/css">
+		@import url('https://fonts.googleapis.com/css2?family=Croissant+One&family=Dancing+Script&display=swap');
+
+		@font-face{
+			font-family: fontku;
+			src: url('ToonyLine_PERSONAL_USE_ONLY.otf');
+		}
+
+		.judul{
+			font-family: fontku;
+			position: relative;
+			margin: 0 auto;
+			background: darkblue;
+			width: 400px;
+			min-height: 150px;
+			color: white;
+		}
+		.garis{
+			position: absolute;
+			width: 100%;
+			height: 20px;
+			background: pink;
+			top: 60%;
+		}
+		.navigasi{
+			position: sticky;
+			top: 10px;
+			margin: 0 auto;
+			background: cyan;
+			width: 400px;
+			min-height: 50px;
+			color: white;
+		}
+		.logo{
+			position: absolute;
+			width: 18%;
+			right: 0;
+			top: 50%;
+			z-index: 1;
+		}
+		.paragraf{
+			font-family: 'Dancing Script', cursive;
+			background: yellow;
+			padding: 20px;
+			text-align: justify;
+		}
+		.iklan{
+			position: fixed;
+			width: 200px;
+			height: 200px;
+			background: red;
+		}
+	</style>
+</head>
+<body>
+		<h1 class="judul">Judul
+			<img src="https://seeklogo.com/images/U/universitas-sebelas-maret-logo-A13323E1E9-seeklogo.com.png" class="logo">
+			<div class="garis"></div>
+		</h1>
+		<h3 class="navigasi">Navigasi</h3>
+
+	<div id="iklan" class="iklan">
+		<a href="#">Ini link menuju iklan</a>
+	</div>
+
+	<p class="paragraf">
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean consectetur, tellus quis porttitor posuere, lorem felis commodo ex, gravida luctus ligula tortor quis ipsum. Aliquam sodales libero quis enim bibendum posuere id vitae risus. Vestibulum eget justo in leo scelerisque pellentesque. Praesent sapien nunc, lobortis at magna vitae, euismod ullamcorper tellus. Donec lectus ipsum, cursus id consectetur quis, sodales a urna. Donec et malesuada lacus, eu sollicitudin nulla. Donec tortor nibh, dignissim eu nisi nec, porta vulputate ex. Vivamus iaculis ex at odio pharetra consectetur. Cras imperdiet nulla eu ultricies varius. Sed ornare nulla et laoreet fermentum. Maecenas pharetra, metus at pulvinar fermentum, erat odio vulputate ipsum, sed lacinia metus eros aliquam magna.
+
+Suspendisse volutpat rhoncus lorem, vel interdum orci feugiat a. Morbi et laoreet massa. Phasellus ultrices euismod justo, ut suscipit sem sagittis vitae. Quisque commodo ac ligula in eleifend. Nullam laoreet pharetra tortor a consequat. Aliquam erat volutpat. Vivamus ornare neque convallis nisl eleifend, at dictum dolor pretium. Aliquam sodales convallis euismod. Nullam vel viverra enim. Nulla accumsan varius dolor a viverra. Fusce metus ante, egestas non nunc ut, ornare dignissim dolor. Pellentesque id urna in libero convallis finibus id aliquam turpis. Vivamus vel lacus id turpis facilisis congue ut a ipsum. Vivamus eleifend, purus vel maximus dapibus, quam felis lobortis ligula, vel venenatis erat sem vel libero.
+
+Maecenas vehicula faucibus neque at iaculis. Donec placerat turpis orci, eu cursus ante lobortis a. Aenean condimentum enim vulputate pretium viverra. Sed eget tincidunt dui. Suspendisse iaculis leo mi, vel iaculis quam aliquet et. Mauris non sapien dictum, accumsan sapien ut, aliquam nisl. Proin eleifend eros eget tellus pulvinar vulputate. Donec et ligula eu arcu dapibus molestie. In iaculis tempor congue. Suspendisse potenti. Duis at pharetra dolor. Proin et ipsum pulvinar, cursus ante a, pulvinar augue. Nam ornare luctus massa et interdum.
+
+Nunc massa purus, malesuada id mattis eu, pellentesque vitae leo. Praesent mattis placerat neque non finibus. Mauris sollicitudin aliquam lectus quis feugiat. Proin ac lacus dolor. Duis sed ex ut eros interdum suscipit. Pellentesque porttitor sodales leo, at finibus risus efficitur quis. Praesent eu sapien lacus. Etiam lacus justo, sollicitudin malesuada nisi et, porta condimentum odio. Curabitur in eros a mauris feugiat commodo at ut nisl.
+
+Aliquam imperdiet, sem id viverra feugiat, mi metus hendrerit quam, eget mattis sapien massa vel mauris. Ut egestas efficitur libero eget efficitur. Mauris a aliquam sapien. Vivamus fermentum augue sem, at facilisis lacus tincidunt vitae. Quisque vehicula lorem felis, quis dictum nisi fringilla quis. Aliquam hendrerit interdum ipsum eu elementum. Nulla facilisi. Nullam tincidunt dictum ultrices. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin id hendrerit felis. Proin rhoncus iaculis velit quis commodo. </p>
+</body>
+</html>

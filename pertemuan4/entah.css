@@ -1,0 +1,28 @@
+body{
+	background: url('https://img.freepik.com/premium-photo/light-scratched-concrete-wall-texture-with-coffee-beans-corner_124507-10556.jpg?w=2000'); 
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+h1{
+	padding-left: 40px;
+	margin-left: 40px;
+	background-color: #256354; 
+	color:white; 
+	border-style:dashed; 
+	border-color: green; 
+	border-radius: 25px;
+}
+p{
+	font-family: arial;
+	color: green;
+}
+.par1{
+	color:red;
+	background-color: pink;
+}
+.par2{
+	color: blue;
+}
+.par3{
+	color: purple;
+}
