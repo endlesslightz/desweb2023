@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Sederhana</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        
+        #calculator {
+            width: 300px;
+            margin: 0 auto;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        input {
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        
+        button {
+            padding: 10px;
+            margin: 5px;
+            box-sizing: border-box;
+            cursor: pointer;
+        }
+        
+        #result {
+            margin-top: 10px;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        .angka {
+            background-color: lightblue;
+            width: 100%;
+            flex: 30%;
+        }
+        
+        .operator {
+            background-color: cornsilk;
+            width: 100%;
+            flex: 1 0 15%;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="judul">Kalkulator Sederhana</h1>
+    <div id="calculator">
+        <input type="text" id="display" readonly>
+        <br>
+        <div class="container">
+            <button class="angka" onclick="appendDisplay('7')">7</button>
+            <button class="angka" onclick="appendDisplay('8')">8</button>
+            <button class="angka" onclick="appendDisplay('9')">9</button>
+            <button class="angka" onclick="appendDisplay('4')">4</button>
+            <button class="angka" onclick="appendDisplay('5')">5</button>
+            <button class="angka" onclick="appendDisplay('6')">6</button>
+            <button class="angka" onclick="appendDisplay('1')">1</button>
+            <button class="angka" onclick="appendDisplay('2')">2</button>
+            <button class="angka" onclick="appendDisplay('3')">3</button>
+            <button class="angka" onclick="appendDisplay('0')">0</button>
+        </div>
+        <div class="container">
+            <button class="operator" onclick="clearDisplay()">Hapus</button>
+            <button class="operator" onclick="appendDisplay('+')">+</button>
+            <button class="operator" onclick="appendDisplay('-')">-</button>
+            <button class="operator" onclick="appendDisplay('*')">*</button>
+            <button class="operator" onclick="appendDisplay('/')">/</button>
+            <button class="operator" onclick="calculateResult()">=</button>
+        </div>
+    </div>
+
+    <script>
+        function appendDisplay(value) {
+            document.getElementById('display').value += value;
+        }
+
+        function clearDisplay() {
+            document.getElementById('display').value = '';
+        }
+
+        function calculateResult() {
+            try {
+                const result = eval(document.getElementById('display').value);
+                document.getElementById('display').value = `${result}`;
+            } catch (error) {
+                document.getElementById('display').value = 'Error';
+            }
+        }
+    </script>
+</body>
+</html>

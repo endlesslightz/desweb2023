@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Lcl Storage</title>
+</head>
+<body>
+	<h1>Halo, <span id="nama"></span> </h1>
+
+	<script type="text/javascript">
+	
+		let hasil = sessionStorage.getItem("nama")
+		if(!hasil){
+			let nama = prompt('Masukkan nama Anda: ')
+			sessionStorage.setItem("nama", nama)
+			document.getElementById('nama').innerText = nama
+		} else {
+			document.getElementById('nama').innerText = hasil
+		}
+
+		
+	</script>
+</body>
+</html>

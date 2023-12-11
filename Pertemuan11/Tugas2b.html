@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kata Kembar Highlighter</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        
+        button {
+            padding: 10px;
+            margin: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        
+        .highlight {
+            background-color: yellow;
+            color: red;
+            font-weight: bold;
+        }
+        
+        #paragraf {
+            margin: 0 auto;
+            width: 70%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Pencari Kata Kembar</h1>
+    <textarea name="input" id="input" cols="100%" rows="10"></textarea>
+    <br>
+    <button onclick="highlightDuplicateWords()">Cari</button>
+    <p id="paragraf">
+        [Paragraf Hasil]
+    </p>
+    <h1 id="hasil"></h1>
+
+    <script>
+        function highlightDuplicateWords() {
+            const paragraph = document.getElementById('paragraf');
+            paragraph.innerText = document.getElementById('input').value;
+            const words = paragraph.innerText.toLowerCase().match(/\b\w+\b/g);
+            const wordCount = [];
+            const duplicatedWords = [];
+            words.forEach(word => {
+                if (wordCount[word]) {
+                    wordCount[word]++;
+                    if (!duplicatedWords.includes(word)) {
+                        duplicatedWords.push(word);
+                    }
+                } else {
+                    wordCount[word] = 1;
+                }
+            });
+
+            duplicatedWords.forEach(duplicatedWord => {
+                const regex = new RegExp(`\\b${duplicatedWord}\\b`, 'gi');
+                paragraph.innerHTML = paragraph.innerHTML.replace(regex, `<span class="highlight">${duplicatedWord}</span>`);
+            });
+
+            document.getElementById('hasil').innerText = `Jumlah kata kembar: ${duplicatedWords.length}`;
+        }
+    </script>
+
+</body>
+
+</html>
