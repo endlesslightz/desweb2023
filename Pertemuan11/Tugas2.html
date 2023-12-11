@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript HTML DOM</title>
+    </head>
+    <body>
+        <h1>PTIK FKIP UNS</h1>        
+        <p>
+            The <ubah>Faculty of Teacher Training and Education</ubah>, <ubah>Sebelas Maret University</ubah>, Surakarta is an <ubah>Educational Personnel Education Institution (LPTK)</ubah> which has 24 study programs in 6 majors. Each study program has its own characteristics in producing <ubah>superior, strong and intelligent educational staff</ubah>.
+        </p>
+        <p>
+            The <ubah>Informatics and Computer Technology Education (PTIK)</ubah> study program is planned to take shelter in the management of the <ubah>Engineering and Vocational Education (PTK)</ubah> department. This placement revises our previous statement, where the PTIK study program is under the P.MIPA department. PTIK is a study program that will produce graduates who are <ubah>prioritized to teach in vocational/vocational programs</ubah>. So, it would be better if PTIK was under the PTK department which oversees vocational programs such as <ubah>Building Engineering Education</ubah>, and <ubah>Mechanical Engineering Education</ubah>. To meet the needs of lecturers in the field of information technology that cannot be met by the PTK department, PTIK will conduct <ubah>resource sharing with the mathematics study program</ubah>.
+        </p>
+
+  <button onclick="highlight()">Highlight Paragraf</button>
+
+        <script>
+        function highlight() 
+        {
+            let kata = document.getElementsByTagName('ubah'); 
+            for (let i=0; i<kata.length; i++)
+           {                          
+                if(kata[i].style.color != "red"){                      
+                    kata[i].style.color = "red";              
+                    kata[i].style.fontWeight  = "bold";    
+                    kata[i].style.background  = "yellow";
+                } else {
+                    kata[i].style.color = "black";              
+                    kata[i].style.fontWeight  = "normal";    
+                    kata[i].style.background  = "white";
+                }
+            }
+        } 
+        </script>
+    </body>
+</html>
+
